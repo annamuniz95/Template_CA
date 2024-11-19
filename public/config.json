@@ -20,7 +20,10 @@
                     "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}",
                     "nome": "{{Contact.Attribute.CustomActivity.Nome}}",
                     "apelido": "{{Contact.Attribute.CustomActivity.Apelido}}",
-                    "idade": "{{Contact.Attribute.CustomActivity.Idade}}"
+                    "idade": "{{Contact.Attribute.CustomActivity.Idade}}",
+                    "opcao1": "{{Contact.Attribute.CustomActivity.Opcao_1}}",
+                    "opcao2": "{{Contact.Attribute.CustomActivity.Opcao_2}}",
+                    "opcao3": "{{Contact.Attribute.CustomActivity.Opcao_3}}"
                     
                 }									
 			],

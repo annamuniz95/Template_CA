@@ -71,12 +71,19 @@ define([
         var apelidoInput = $('#input_apelido').val();
         var idadeInput = $('#input_idade').val();
 
+        var opcao_1 = $('#opcao_1').val();
+        var opcao_2 = $('#opcao_2').val();
+        var opcao_3 = $('#opcao_3').val();
+
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}",
             "nome":nomeInput,
             "apelido":apelidoInput,
-            "idade": idadeInput
+            "idade": idadeInput,
+            "opcao1": opcao_1,
+            "opcao2": opcao_2,
+            "opcao3": opcao_3
         }];
         
         payload['metaData'].isConfigured = true;

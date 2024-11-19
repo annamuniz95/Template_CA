@@ -7,6 +7,7 @@ const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 const SFClient = require('../public/js/sfmc-client');
 var util = require('util');
 var http = require('https');
+const { Console } = require('console');
 
 exports.logExecuteData = [];
 
@@ -75,7 +76,7 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    var dados_nome, dados_apelido, dados_idade;
+    var dados_nome, dados_apelido, dados_idade, Opcao_1, Opcao_2, Opcao_3;
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -96,8 +97,11 @@ exports.execute = function (req, res) {
             dados_nome = decodedArgs.nome;
             dados_apelido = decodedArgs.apelido;
             dados_idade = decodedArgs.idade;
+            Opcao_1 = decodedArgs.opcao_1;
+            Opcao_2 = decodedArgs.opcao_2;
+            Opcao_3 = decodedArgs.opcao_3;
 
-            console.log("dados_nome: " + dados_nome + " dados_apelido: " + dados_apelido + " dados_idade: " + dados_idade);
+            console.log("Opcao_1: " +  Opcao_1 + " Opcao_2: " +  Opcao_2 + " Opcao_3: " + Opcao_3);
             
             logData(req);
             //res.send(200, 'Execute');
@@ -118,7 +122,7 @@ exports.execute = function (req, res) {
           Id: dados_idade,
         },
         values: {
-            nome: dados_nome + dados_apelido,
+            nome: dados_nome + " " + dados_apelido,
             data: new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60000) + (21600000)),
         },
       },]);
