@@ -18,7 +18,7 @@
            "inArguments":[
 				{
                     "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}",
-                    "nome": "{{Contact.Attribute.CustomActivity.Nome}}",
+                    "nome": "testeNome",
                     "apelido": "{{Contact.Attribute.CustomActivity.Apelido}}",
                     "idade": "{{Contact.Attribute.CustomActivity.Idade}}"
                     
