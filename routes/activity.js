@@ -77,8 +77,8 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     //console.log( "execute: " + req.body );
     console.log("Dentro do execute");
-    console.log("Execute REQ: " + req);
-    console.log("Execute RES: " + res);
+    console.log("Execute REQ: " + JSON.stringify(req));
+    console.log("Execute RES: " + JSON.stringify(res));
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
