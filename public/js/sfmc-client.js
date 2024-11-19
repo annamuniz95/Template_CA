@@ -115,32 +115,33 @@ async function authenticate() {
  * @param {Array} data - Dados a serem salvos.
  * @returns {Promise} - Promise com o resultado da operação.
  */
-const saveData = async (externalKey, data) => {
+ const saveData = async (externalKey, data) => {
   console.log("Dentro da função saveData. ExternalKey:", externalKey, " | Data:", JSON.stringify(data));
 
   try {
-    // Obtém o token de acesso
-    const token = await authenticate();
+    const token = await authenticate();  // Obtém o token de acesso
+    const { origin } = await setOptions();  // Obtém a URL base da API
+    const url = `${origin}/hub/v1/dataevents/key:${externalKey}/rowset`;  // Monta a URL de destino
 
-    const { origin } = await setOptions();
-    const url = `${origin}/hub/v1/dataevents/key:${externalKey}/rowset`; // URL da API para enviar os dados
+    // Corpo da solicitação
+    const requestBody = {
+      items: data, // Dados a serem inseridos na Data Extension
+    };
 
-    // Envia os dados para a Data Extension usando Axios
-    const response = await axios.post(
-      url,
-      { items: data }, // Dados a serem inseridos na Data Extension
-      {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    console.log("Corpo da solicitação:", JSON.stringify(requestBody));  // Debug do corpo
+
+    // Envia os dados
+    const response = await axios.post(url, requestBody, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
 
     console.log("Dados salvos com sucesso:", response.data);
     return response.data;
   } catch (error) {
-    console.error('Erro ao salvar dados:', error);
+    console.error('Erro ao salvar dados:', error.response ? error.response.data : error);
     throw error;
   }
 };
