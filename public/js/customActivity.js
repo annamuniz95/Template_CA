@@ -67,13 +67,16 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
+        var nomeInput = $('#input_nomel').val();
+        var apelidoInput = $('#input_apelido').val();
+        var idadeInput = $('#input_idade').val();
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            //"emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
-            "emailAddress": "teste"
+            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}",
+            "nome":nomeInput,
+            "apelido":apelidoInput,
+            "idade": idadeInput
         }];
         
         payload['metaData'].isConfigured = true;
