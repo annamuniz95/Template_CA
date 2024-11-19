@@ -75,7 +75,7 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    //console.log( "execute: " + req.body );
+    var dados_nome, dados_apelido, dados_idade;
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -92,6 +92,10 @@ exports.execute = function (req, res) {
             var decodedArgs = decoded.inArguments[0];
             console.log(" decodedArgs stringify: " + JSON.stringify(decodedArgs));
             console.log(" decoded stringify: " + JSON.stringify(decoded));
+
+            dados_nome = decodedArgs.nome;
+            dados_apelido = decodedArgs.dados_apelido;
+            dados_idade = decodedArgs.dados_idade;
             
             logData(req);
             //res.send(200, 'Execute');
@@ -109,10 +113,10 @@ exports.execute = function (req, res) {
 
     SFClient(deExternalKey, [ {
         keys: {
-          Id: "1234",
+          Id: dados_idade,
         },
         values: {
-            nome: "Bia",
+            nome: dados_nome + dados_apelido,
             data: new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60000) + (21600000)),
         },
       },]);
