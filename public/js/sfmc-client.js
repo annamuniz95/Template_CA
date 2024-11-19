@@ -56,6 +56,7 @@ async function setOptions() {
     return result;
   };
   
-  export default {
+  /*export {
     saveData,
-  };
+  };*/
+  modulo.exports = saveData;
