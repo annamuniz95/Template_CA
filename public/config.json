@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[
 				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}",
+                    "emailAddress": "teste",
                     "nome": "testeNome",
                     "apelido": "{{Contact.Attribute.CustomActivity.Apelido}}",
                     "idade": "{{Contact.Attribute.CustomActivity.Idade}}"
