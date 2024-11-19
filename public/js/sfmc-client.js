@@ -30,16 +30,16 @@ async function setOptions() {
    */
   const saveData = async (externalKey, data) => {
     const client = await setOptions().then((options) => {
-      console.info('result of setOptions', arg = {
+      /*console.info('result of setOptions', arg = {
         options,
-      });
+      });*/
   
       return new FuelRest(options);
     });
 
-    console.info('client', arg = {
+    /*console.info('client', arg = {
       client,
-    });
+    });*/
   
     let result;
     if (client) {
@@ -55,8 +55,5 @@ async function setOptions() {
   
     return result;
   };
-  
-  /*export {
-    saveData,
-  };*/
+
   module.exports = saveData;
