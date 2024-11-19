@@ -94,8 +94,10 @@ exports.execute = function (req, res) {
             console.log(" decoded stringify: " + JSON.stringify(decoded));
 
             dados_nome = decodedArgs.nome;
-            dados_apelido = decodedArgs.dados_apelido;
-            dados_idade = decodedArgs.dados_idade;
+            dados_apelido = decodedArgs.apelido;
+            dados_idade = decodedArgs.idade;
+
+            console.log("dados_nome: " + dados_nome + " dados_apelido: " + dados_apelido + " dados_idade: " + dados_idade);
             
             logData(req);
             //res.send(200, 'Execute');
