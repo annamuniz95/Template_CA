@@ -131,7 +131,7 @@ async function authenticate() {
     console.log("Corpo da solicitação:", JSON.stringify(requestBody));  // Debug do corpo
 
     // Envia os dados
-    const response = await axios.post(url, requestBody, {
+    const response = await axios.post(url, data, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
