@@ -90,6 +90,7 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
+            console.log(" decodedArgs stringify: " + JSON.stringify(decodedArgs));
             console.log(" decoded stringify: " + JSON.stringify(decoded));
             
             logData(req);
