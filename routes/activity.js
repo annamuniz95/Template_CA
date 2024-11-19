@@ -4,7 +4,7 @@ var util = require('util');
 // Deps
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
-const SFClient = require('../public/js/sfmc-client');
+//const SFClient = require('../public/js/sfmc-client');
 var util = require('util');
 var http = require('https');
 
@@ -99,7 +99,7 @@ exports.execute = function (req, res) {
     });
 
     //inserir logica de execução aqui
-
+/*
     const deExternalKey = "teste_logs"; //process.env.deExternalKey
 
     SFClient.saveData(deExternalKey, [ {
@@ -111,7 +111,7 @@ exports.execute = function (req, res) {
             data: new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60000) + (21600000)),
         },
       },]);
-    //fim lógica execução
+    //fim lógica execução*/
 };
 
 
