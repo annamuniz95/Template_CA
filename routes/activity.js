@@ -23,7 +23,7 @@ function logData(req) {
         cookies: req.cookies,
         ip: req.ip,
         path: req.path,
-        host: req.host,
+        host: req.hostname,
         fresh: req.fresh,
         stale: req.stale,
         protocol: req.protocol,
@@ -90,7 +90,7 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            console.log(" resultado decodedArgs: " + decodedArgs);
+            console.log(" resultado decodedArgs: " + JSON.stringify(decodedArgs));
             
             logData(req);
             //res.send(200, 'Execute');
