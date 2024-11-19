@@ -59,4 +59,4 @@ async function setOptions() {
   /*export {
     saveData,
   };*/
-  modulo.exports = saveData;
+  module.exports = saveData;
