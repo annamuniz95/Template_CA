@@ -67,7 +67,7 @@ define([
     }
 
     function save() {
-        var nomeInput = $('#input_nomel').val();
+        var nomeInput = $('#input_nome').val();
         var apelidoInput = $('#input_apelido').val();
         var idadeInput = $('#input_idade').val();
 
