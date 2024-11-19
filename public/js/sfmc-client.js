@@ -29,6 +29,7 @@ async function setOptions() {
    * @returns {?Promise}
    */
   const saveData = async (externalKey, data) => {
+    onsole.log("////////dentro da funcao saveData. externalKey:  " + externalKey + " | data: " + data);
     const client = await setOptions().then((options) => {
       /*console.info('result of setOptions', arg = {
         options,
@@ -43,6 +44,7 @@ async function setOptions() {
   
     let result;
     if (client) {
+      console.log("////////dentro do if cliente: " + client);
       result = await client.post({
         uri: `/hub/v1/dataevents/key:${externalKey}/rowset`,
         headers: {
@@ -52,7 +54,7 @@ async function setOptions() {
         body: data,
       });
     }
-  
+    console.log("////////result saveData: " + result);
     return result;
   };
 
