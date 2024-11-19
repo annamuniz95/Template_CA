@@ -138,12 +138,13 @@ async function authenticate() {
       },
     });
 
-    console.log("Dados salvos com sucesso:", response.data);
+    console.log("Resposta da API:", response.data);
     return response.data;
   } catch (error) {
     console.error('Erro ao salvar dados:', error.response ? error.response.data : error);
     throw error;
   }
 };
+
 
 module.exports = saveData;
