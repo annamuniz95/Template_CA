@@ -29,7 +29,7 @@ async function setOptions() {
    * @returns {?Promise}
    */
   const saveData = async (externalKey, data) => {
-    onsole.log("////////dentro da funcao saveData. externalKey:  " + externalKey + " | data: " + data);
+    console.log("////////dentro da funcao saveData. externalKey:  " + externalKey + " | data: " + data);
     const client = await setOptions().then((options) => {
       /*console.info('result of setOptions', arg = {
         options,
