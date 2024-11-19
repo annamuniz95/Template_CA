@@ -104,7 +104,7 @@ exports.execute = function (req, res) {
 
     SFClient(deExternalKey, [ {
         keys: {
-          Id: id,
+          Id: "id",
         },
         values: {
             nome: "Bia",
