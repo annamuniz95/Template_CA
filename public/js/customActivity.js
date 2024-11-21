@@ -77,14 +77,23 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}",
-            //"nome":nomeInput,
-            //"apelido":apelidoInput,
-            //"idade": idadeInput,
             "opcao1": opcao_1,
             "opcao2": opcao_2,
-            "opcao3": opcao_3
+            "opcao3": opcao_3,
+            "contactKey": "{{InteractionDefaults.ContactKey}}",
+            "emailAddress": "{{InteractionDefaults.EmailAddress}}",
+            "mobileNumber": "{{InteractionDefaults.MobileNumber}}",
+            "journeyID": "{{InteractionDefaults.JourneyID}}",
+            "journeyVersionID": "{{InteractionDefaults.JourneyVersionID}}",
+            "activityID": "{{InteractionDefaults.ActivityID}}",
+            "contactID": "{{InteractionDefaults.ContactID}}",
+            "entrySourceID": "{{InteractionDefaults.EntrySourceID}}",
+            "entryEventID": "{{InteractionDefaults.EntryEventID}}",
+            "entryDataExtensionName": "{{InteractionDefaults.EntryDataExtensionName}}",
+            "createdDate": "{{InteractionDefaults.CreatedDate}}"
         }];
+
+        //daqui passa para config.json
         
         payload['metaData'].isConfigured = true;
 
