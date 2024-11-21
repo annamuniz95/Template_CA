@@ -102,10 +102,10 @@ exports.execute = function (req, res) {
             if (Opcao_1) {
                 console.log("|| vai executar a prmiera lógica ||");
             } 
-            elseif (Opcao_2) {
+            else if (Opcao_2) {
                 console.log("|| vai executar a segunda lógica ||");
             } 
-            elseif (Opcao_3) {
+            else if (Opcao_3) {
                 console.log("|| vai executar a terceira lógica ||");
             }
             
