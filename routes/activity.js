@@ -66,9 +66,7 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( "save: " +   req.body );
     logData(req);
-    //res.send(200, 'Save');
     res.status(200).send('Save');
 };
 
@@ -109,8 +107,7 @@ exports.execute = function (req, res) {
             }
             
             logData(req);
-            //res.status(200).send('Execute');
-            res.status(200).send('Informação enviada com sucesso');
+            res.status(200).send('Execute');
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
@@ -139,9 +136,7 @@ exports.execute = function (req, res) {
  */
 exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( "publish: " +   req.body );
     logData(req);
-    //res.send(200, 'Publish');
     res.status(200).send('Publish');
 };
 
@@ -150,8 +145,6 @@ exports.publish = function (req, res) {
  */
 exports.validate = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( "validate: " +   req.body );
     logData(req);
-    //res.send(200, 'Validate');
     res.status(200).send('Validate');
 };
