@@ -23,7 +23,6 @@
         })();
     </script>
     <style>
-
         .card {
             border: 1px solid #dcdcdc; /* Borda fina e simples */
             padding: 15px; /* Espaçamento interno */
@@ -32,13 +31,27 @@
             background-color: #f9f9f9; /* Fundo leve para destaque */
         }
         
-        .card input[type="checkbox"] {
-            margin-right: 10px; /* Espaçamento entre o checkbox e o texto */
+        .card input[type="radio"] {
+            margin-right: 10px; /* Espaçamento entre o radio button e o texto */
         }
         
         label {
             font-family: Arial, sans-serif; /* Fonte limpa e legível */
             font-size: 14px; /* Tamanho de texto ajustado */
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -50,20 +63,22 @@
             <p>Alguma explicação de como utilizar a custom activity.</p>
             
             <main class="slds-col">
-                <div class="card">
-                    <input type="checkbox" name="opcao_1" id="opcao_1">
-                    <label for="opcao_1">1. Envia o Push e invoca serviço que grava Histórico</label>
-                </div>
+                <form id="push-options-form">
+                    <div class="card">
+                        <input type="radio" name="push_option" id="opcao_1" value="1" required>
+                        <label for="opcao_1">1. Envia o Push e invoca serviço que grava Histórico</label>
+                    </div>
 
-                <div class="card">
-                    <input type="checkbox" name="opcao_2" id="opcao_2">
-                    <label for="opcao_2">2. Envia o Push e não invoca serviço</label>
-                </div>
+                    <div class="card">
+                        <input type="radio" name="push_option" id="opcao_2" value="2">
+                        <label for="opcao_2">2. Envia o Push e não invoca serviço</label>
+                    </div>
 
-                <div class="card">
-                    <input type="checkbox" name="opcao_3" id="opcao_3">
-                    <label for="opcao_3">3. Não envia o Push e invoca serviço</label>
-                </div>
+                    <div class="card">
+                        <input type="radio" name="push_option" id="opcao_3" value="3">
+                        <label for="opcao_3">3. Não envia o Push e invoca serviço</label>
+                    </div>
+                </form>
             </main>
         </div>
     </div>
