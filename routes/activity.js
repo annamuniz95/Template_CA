@@ -127,10 +127,10 @@ exports.execute = function (req, res) {
 
     SFClient(deExternalKey, [ {
         keys: {
-          Id: "123",
+          Id: Math.random(),
         },
         values: {
-            nome: "teste01",
+            nome: "teste-"+Math.random(),
             data: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
         },
       },]);
