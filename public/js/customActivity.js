@@ -67,9 +67,7 @@ define([
     }
 
     function save() {
-        /*var nomeInput = $('#input_nome').val();
-        var apelidoInput = $('#input_apelido').val();
-        var idadeInput = $('#input_idade').val();*/
+        console.log("!!!! função SAVE !!!!")
 
         var opcao_1 = $('#opcao_1').is(':checked');
         var opcao_2 = $('#opcao_2').is(':checked');
@@ -82,15 +80,7 @@ define([
             "opcao3": opcao_3,
             "contactKey": "{{InteractionDefaults.ContactKey}}",
             "emailAddress": "{{InteractionDefaults.EmailAddress}}",
-            "mobileNumber": "{{InteractionDefaults.MobileNumber}}",
-            "journeyID": "{{InteractionDefaults.JourneyID}}",
-            "journeyVersionID": "{{InteractionDefaults.JourneyVersionID}}",
-            "activityID": "{{InteractionDefaults.ActivityID}}",
-            "contactID": "{{InteractionDefaults.ContactID}}",
-            "entrySourceID": "{{InteractionDefaults.EntrySourceID}}",
-            "entryEventID": "{{InteractionDefaults.EntryEventID}}",
-            "entryDataExtensionName": "{{InteractionDefaults.EntryDataExtensionName}}",
-            "createdDate": "{{InteractionDefaults.CreatedDate}}"
+            "mobileNumber": "{{InteractionDefaults.MobileNumber}}"
         }];
 
         //daqui passa para config.json

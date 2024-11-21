@@ -22,16 +22,7 @@
                     "opcao3": "{{Contact.Attribute.CustomActivity.Opcao_3}}",
                     "contactKey": "{{Contact.Attribute.CustomActivity.ContactKey}}",
                     "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}",
-                    "mobileNumber": "{{Contact.Attribute.CustomActivity.MobileNumber}}",
-                    "journeyID": "{{Contact.Attribute.CustomActivity.JourneyID}}",
-                    "journeyVersionID": "{{Contact.Attribute.CustomActivity.JourneyVersionID}}",
-                    "activityID": "{{Contact.Attribute.CustomActivity.ActivityID}}",
-                    "contactID": "{{Contact.Attribute.CustomActivity.ContactID}}",
-                    "entrySourceID": "{{Contact.Attribute.CustomActivity.EntrySourceID}}",
-                    "entryEventID": "{{Contact.Attribute.CustomActivity.EntryEventID}}",
-                    "entryDataExtensionName": "{{Contact.Attribute.CustomActivity.EntryDataExtensionName}}",
-                    "createdDate": "{{Contact.Attribute.CustomActivity.CreatedDate}}"
-                    
+                    "mobileNumber": "{{Contact.Attribute.CustomActivity.MobileNumber}}"
                 }									
 			],
           "outArguments": [],
