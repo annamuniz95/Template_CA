@@ -109,7 +109,8 @@ exports.execute = function (req, res) {
             }
             
             logData(req);
-            res.status(200).send('Execute');
+            //res.status(200).send('Execute');
+            res.status(200).send('Informação enviada com sucesso');
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
