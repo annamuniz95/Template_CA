@@ -76,6 +76,7 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
+    console.log("|| Aplicação esta executando /o/ ||");
     var Opcao_1, Opcao_2, Opcao_3;
 
     // example on how to decode JWT
@@ -98,12 +99,18 @@ exports.execute = function (req, res) {
             Opcao_2 = decodedArgs.opcao2;
             Opcao_3 = decodedArgs.opcao3;
 
-            console.log("Opcao_1: " +  Opcao_1 + " Opcao_2: " +  Opcao_2 + " Opcao_3: " + Opcao_3);
+            if (Opcao_1) {
+                console.log("|| vai executar a prmiera lógica ||");
+            } 
+            elseif (Opcao_2) {
+                console.log("|| vai executar a segunda lógica ||");
+            } 
+            elseif (Opcao_3) {
+                console.log("|| vai executar a terceira lógica ||");
+            }
             
             logData(req);
-            //res.send(200, 'Execute');
             res.status(200).send('Execute');
-            console.log("executando!!!!!!!!!!!!!!!!!!!!!!!!!");
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
@@ -116,10 +123,10 @@ exports.execute = function (req, res) {
 
     SFClient(deExternalKey, [ {
         keys: {
-          Id: dados_idade,
+          Id: "123",
         },
         values: {
-            nome: dados_nome + " " + dados_apelido,
+            nome: "teste01",
             data: new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60000) + (21600000)),
         },
       },]);
