@@ -77,10 +77,7 @@ define([
             "tokens": authTokens,
             "opcao1": opcao_1,
             "opcao2": opcao_2,
-            "opcao3": opcao_3,
-            "contactKey": "{{InteractionDefaults.ContactKey}}",
-            "emailAddress": "{{InteractionDefaults.EmailAddress}}",
-            "mobileNumber": "{{InteractionDefaults.MobileNumber}}"
+            "opcao3": opcao_3
         }];
 
         //daqui passa para config.json
