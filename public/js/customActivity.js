@@ -72,6 +72,7 @@ define([
         var opcao_1 = $('#opcao_1').is(':checked');
         var opcao_2 = $('#opcao_2').is(':checked');
         var opcao_3 = $('#opcao_3').is(':checked');
+        console.log("!!! ainda no save. opcao_1: " + opcao_1 + " | opcao_2: " + opcao_2 + " | opcao_3: " + opcao_3);
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,

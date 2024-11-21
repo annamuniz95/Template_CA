@@ -17,9 +17,9 @@
         "execute": {
            "inArguments":[
 				{
-                    "opcao1": "{{Contact.Attribute.CustomActivity.Opcao_1}}",
-                    "opcao2": "{{Contact.Attribute.CustomActivity.Opcao_2}}",
-                    "opcao3": "{{Contact.Attribute.CustomActivity.Opcao_3}}"
+                    "opcao1": "{{Contact.Attribute.CustomActivity.opcao1}}",
+                    "opcao2": "{{Contact.Attribute.CustomActivity.opcao2}}",
+                    "opcao3": "{{Contact.Attribute.CustomActivity.opcao3}}"
                 }									
 			],
           "outArguments": [],
