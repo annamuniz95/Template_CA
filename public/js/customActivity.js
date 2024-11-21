@@ -79,7 +79,8 @@ define([
             "opcao1": opcao_1,
             "opcao2": opcao_2,
             "opcao3": opcao_3,
-            "contactKey": ""
+            "contactKey": "{{Contact.Key}}",
+            "emailAddress": "{{InteractionDefaults.EmailAddress}}",
         }];
 
         //daqui passa para config.json

@@ -20,7 +20,8 @@
                     "opcao1": "",
                     "opcao2": "",
                     "opcao3": "",
-                    "contactKey": "1234"
+                    "contactKey": "",
+                    "emailAddress":""
                 }									
 			],
           "outArguments": [],
