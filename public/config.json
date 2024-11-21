@@ -17,10 +17,10 @@
         "execute": {
            "inArguments":[
 				{
-                    "opcao1": "{{Contact.Attribute.CustomActivity.opcao1}}",
-                    "opcao2": "{{Contact.Attribute.CustomActivity.opcao2}}",
-                    "opcao3": "{{Contact.Attribute.CustomActivity.opcao3}}",
-                    "contactKey": ""
+                    "opcao1": "",
+                    "opcao2": "",
+                    "opcao3": "",
+                    "contactKey": "1234"
                 }									
 			],
           "outArguments": [],
