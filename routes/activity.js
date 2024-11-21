@@ -74,7 +74,14 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    console.log("|| Aplicação esta executando /o/ ||");
+    console.log("// ============================== ||");
+    console.log("|| Aplicação                      ||");
+    console.log("||           esta                 ||");
+    console.log("||                executando      ||");
+    console.log("||                            /o/ ||");
+    console.log("|| ============================== ||");
+
+
     var Opcao_1, Opcao_2, Opcao_3;
 
     // example on how to decode JWT
