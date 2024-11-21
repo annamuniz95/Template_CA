@@ -79,7 +79,7 @@ define([
             "opcao1": opcao_1,
             "opcao2": opcao_2,
             "opcao3": opcao_3,
-            "contactKey": "{{Contact.Key}}"
+            "contactKey": ""
         }];
 
         //daqui passa para config.json
