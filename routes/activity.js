@@ -76,7 +76,7 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    var dados_nome, dados_apelido, dados_idade, Opcao_1, Opcao_2, Opcao_3;
+    var Opcao_1, Opcao_2, Opcao_3;
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -94,12 +94,9 @@ exports.execute = function (req, res) {
             console.log(" decodedArgs stringify: " + JSON.stringify(decodedArgs));
             console.log(" decoded stringify: " + JSON.stringify(decoded));
 
-            dados_nome = decodedArgs.nome;
-            dados_apelido = decodedArgs.apelido;
-            dados_idade = decodedArgs.idade;
-            Opcao_1 = decodedArgs.opcao_1;
-            Opcao_2 = decodedArgs.opcao_2;
-            Opcao_3 = decodedArgs.opcao_3;
+            Opcao_1 = decodedArgs.opcao1;
+            Opcao_2 = decodedArgs.opcao2;
+            Opcao_3 = decodedArgs.opcao3;
 
             console.log("Opcao_1: " +  Opcao_1 + " Opcao_2: " +  Opcao_2 + " Opcao_3: " + Opcao_3);
             
