@@ -93,7 +93,6 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             console.log(" decodedArgs stringify: " + JSON.stringify(decodedArgs));
-            console.log(" decoded stringify: " + JSON.stringify(decoded));
 
             Opcao_1 = decodedArgs.opcao1;
             Opcao_2 = decodedArgs.opcao2;
@@ -127,7 +126,7 @@ exports.execute = function (req, res) {
         },
         values: {
             nome: "teste01",
-            data: new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60000) + (21600000)),
+            data: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
         },
       },]);
     //fim lógica execução

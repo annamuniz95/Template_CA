@@ -22,37 +22,50 @@
             require(config, dependencies);
         })();
     </script>
+    <style>
+
+        .card {
+            border: 1px solid #dcdcdc; /* Borda fina e simples */
+            padding: 15px; /* Espaçamento interno */
+            margin-bottom: 20px; /* Espaçamento entre os cards */
+            border-radius: 5px; /* Cantos levemente arredondados */
+            background-color: #f9f9f9; /* Fundo leve para destaque */
+        }
+        
+        .card input[type="checkbox"] {
+            margin-right: 10px; /* Espaçamento entre o checkbox e o texto */
+        }
+        
+        label {
+            font-family: Arial, sans-serif; /* Fonte limpa e legível */
+            font-size: 14px; /* Tamanho de texto ajustado */
+        }
+    </style>
 </head>
 
 <body>
     <div id="step1" class="step">
         <div class="slds-grid">
-
+            <h4>Histórico de Push</h4>
+            <p>Alguma explicação de como utilizar a custom activity.</p>
+            
             <main class="slds-col">
-                <!--label for="input_nome">Nome:</label>
-                <input type="text" name="input_nome" id="input_nome">
+                <div class="card">
+                    <input type="checkbox" name="opcao_1" id="opcao_1">
+                    <label for="opcao_1">1. Envia o Push e invoca serviço que grava Histórico</label>
+                </div>
 
-                <label for="input_apelido">Apelido:</label>
-                <input type="text" name="input_apelido" id="input_apelido">
+                <div class="card">
+                    <input type="checkbox" name="opcao_2" id="opcao_2">
+                    <label for="opcao_2">2. Envia o Push e não invoca serviço</label>
+                </div>
 
-                <label for="input_idade">Idade:</label>
-                <input type="text" name="input_idade" id="input_idade"-->
-                
-                <br><br>
-                
-                <input type="checkbox" name="opcao_1" id="opcao_1">
-                <label for="opcao_1">1. Envia o Push e invoca serviço que grava Histórico</label>
-
-                <input type="checkbox" name="opcao_2" id="opcao_2">
-                <label for="opcao_2">2. Envia o Push e não invoca serviço</label>
-
-                <input type="checkbox" name="opcao_3" id="opcao_3">
-                <label for="opcao_3">3. Não envia o Push e invoca serviço</label>
-
-
+                <div class="card">
+                    <input type="checkbox" name="opcao_3" id="opcao_3">
+                    <label for="opcao_3">3. Não envia o Push e invoca serviço</label>
+                </div>
             </main>
         </div>
-
     </div>
 </body>
 
