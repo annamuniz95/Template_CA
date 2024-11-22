@@ -18,6 +18,13 @@ define([
 
     connection.on('clickedNext', save);
 
+    connection.on('requestedInteraction', function (interaction) {
+        if (interaction) {
+            requestedInteractionBody = interaction;
+        }
+        console.log("|| interaction: " + interaction);
+    });
+
    
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
@@ -45,6 +52,8 @@ define([
         );
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
+
+        console.log("inArguments: " + JSON.stringify(inArguments));
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
@@ -86,6 +95,9 @@ define([
             "phoneNumber": "",
             "emailAddress": "",
         }];
+
+        console.log("|| payload.inArgument: " + payload.inArgument);
+        console.log("|| payload.inArgument JSON: " + JSON.stringify(payload.inArgument));
 
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
