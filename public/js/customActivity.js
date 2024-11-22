@@ -91,12 +91,12 @@ define([
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
             "emailAddress": "{{InteractionDefaults.Email}}",
-            "telefone": "{{InteractionDefaults.SMS}}"
+            "telefone": "{{InteractionDefaults.Telefone}}"
         }];
 
-        //tentativa1: InteractionDefaults.Email 
-        // {{InteractionDefaults.SMS}}
-
+        //tentativa1: InteractionDefaults.Email  - funcionou
+        // {{InteractionDefaults.SMS}} nao funcionou
+        // {{InteractionDefaults.Telefone}}
 
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
