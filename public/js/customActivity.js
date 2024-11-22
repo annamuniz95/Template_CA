@@ -95,7 +95,7 @@ define([
             "emailAddress": "",
         }];
 
-        console.log("|| payload.inArgument: " + payload.inArgument);
+        console.log("|| payload.inArgument: ");
 
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
