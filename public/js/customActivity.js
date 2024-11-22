@@ -90,9 +90,10 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
-            "phoneNumber": "{{Contact.Default.PhoneNumber}}",
-            "emailAddress": "{{Contact.Default.Email}}",
+            "emailAddress": "{{InteractionDefaults.Email}}",
         }];
+
+        //tentativa1: InteractionDefaults.Email 
 
 
         //testar com Contact.EmailAddress, ou só emailAddress
