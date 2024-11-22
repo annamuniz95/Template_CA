@@ -80,9 +80,10 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
+            "mobile": "{{Contact.Default.SMS}}",
             "emailAddress": "{{InteractionDefaults.EmailAddress}}",
         }];
-
+                    //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
         
         payload['metaData'].isConfigured = true;

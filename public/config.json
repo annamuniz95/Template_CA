@@ -21,7 +21,8 @@
                     "opcao2": "",
                     "opcao3": "",
                     "contactKey": "",
-                    "emailAddress":""
+                    "emailAddress":"",
+                    "mobile":""
                 }									
 			],
           "outArguments": [],
