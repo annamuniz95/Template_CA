@@ -82,7 +82,7 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
-            "mobile": "",
+            "phoneNumber": "{{Contact.Default.PhoneNumber}}",
             "emailAddress": "",
         }];
                     //testar com Contact.EmailAddress, ou só emailAddress
