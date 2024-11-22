@@ -23,6 +23,8 @@ define([
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
+        alert("preencha as informações");
+
     }
 
     function initialize(data) {
@@ -52,7 +54,7 @@ define([
 
         connection.trigger('updateButton', {
             button: 'next',
-            text: 'done',
+            text: 'Confirmar',
             visible: true
         });
     }
@@ -80,8 +82,8 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
-            "mobile": "{{Contact.Default.SMS}}",
-            "emailAddress": "{{InteractionDefaults.EmailAddress}}",
+            "mobile": "",
+            "emailAddress": "",
         }];
                     //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
