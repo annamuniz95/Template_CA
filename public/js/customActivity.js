@@ -15,6 +15,12 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
+    
+    connection.trigger('requestSchema'); // adicionei agora
+    connection.on('requestedSchema', function (data) {
+        // save schema
+        console.log('*** Schema ***', JSON.stringify(data['schema']));
+     }); //adicionei agora
 
     connection.on('clickedNext', save);
 
@@ -91,7 +97,7 @@ define([
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
             "emailAddress": "{{InteractionDefaults.Email}}",
-            "telefone": "{{Contact.Default.MobilePhone}}"
+            "telefone": "{{Contact.Default.SMS}}"
         }];
 
         //tentativa1: InteractionDefaults.Email  - funcionou
@@ -99,7 +105,7 @@ define([
         // {{InteractionDefaults.Telefone}} nao funcionou
         // {{Contact.Default.SMS}} funcionou mas veio vazio
         // "{{Contact.Default.telemovel}}" nao funcionou
-        // "{{Contact.Default.MobilePhone}}
+        // "{{Contact.Default.MobilePhone}} nao funcionou
 
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
