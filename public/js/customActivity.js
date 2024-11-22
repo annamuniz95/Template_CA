@@ -15,6 +15,13 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
+
+    connection.on('requestedInteraction', function (interaction) {
+        if (interaction) {
+            requestedInteractionBody = interaction;
+        }
+        console.log("|| interaction: " + interaction);
+    });
    
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
@@ -54,7 +61,7 @@ define([
 
         connection.trigger('updateButton', {
             button: 'next',
-            text: 'Confirmar',
+            text: 'done',
             visible: true
         });
     }
@@ -82,7 +89,7 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
-            "phoneNumber": "{{Contact.Default.PhoneNumber}}",
+            "phoneNumber": "",
             "emailAddress": "",
         }];
                     //testar com Contact.EmailAddress, ou só emailAddress
