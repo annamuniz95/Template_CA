@@ -1,3 +1,5 @@
+const { json } = require("body-parser");
+
 define([
     'postmonger'
 ], function (
@@ -50,7 +52,7 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log("inArguments: " + inArguments);
+        console.log("inArguments: " + JSON.stringify(inArguments));
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
@@ -81,7 +83,7 @@ define([
         var opcao_1 = $('#opcao_1').is(':checked');
         var opcao_2 = $('#opcao_2').is(':checked');
         var opcao_3 = $('#opcao_3').is(':checked');
-        console.log("!!! ainda no save. opcao_1: " + opcao_1 + " | opcao_2: " + opcao_2 + " | opcao_3: " + opcao_3);
+        
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
@@ -92,7 +94,11 @@ define([
             "phoneNumber": "",
             "emailAddress": "",
         }];
-                    //testar com Contact.EmailAddress, ou só emailAddress
+
+        console.log("|| payload.inArgument: " + payload.inArgument);
+        console.log("|| payload.inArgument JSON: " + JSON.stringify(payload.inArgument));
+
+        //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
         
         payload['metaData'].isConfigured = true;
