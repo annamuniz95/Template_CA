@@ -18,12 +18,6 @@ define([
 
     connection.on('clickedNext', save);
 
-    connection.on('requestedInteraction', function (interaction) {
-        if (interaction) {
-            requestedInteractionBody = interaction;
-        }
-        console.log("|| interaction: " + interaction);
-    });
    
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
@@ -51,8 +45,6 @@ define([
         );
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
-        console.log("|| inArguments: " + inArguments[0]);
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
