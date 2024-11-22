@@ -90,8 +90,8 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
-            "phoneNumber": "{{Contact.Default.telemovel}}",
-            "emailAddress": "{{Contact.Default.email}}",
+            "phoneNumber": "{{Contact.Default.PhoneNumber}}",
+            "emailAddress": "{{Contact.Default.Email}}",
         }];
 
 
