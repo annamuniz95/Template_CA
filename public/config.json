@@ -22,8 +22,7 @@
                   "opcao3": "",
                   "contactKey": "",
                   "emailAddress":"",
-                  "telefone":"",
-                  "primeiroNome": ""
+                  "telefone":""
               }									
     ],
         "outArguments": [],

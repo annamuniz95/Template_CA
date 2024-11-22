@@ -97,11 +97,10 @@ define([
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
             "emailAddress": "{{InteractionDefaults.Email}}",
-            "telefone": "{{InteractionDefaults.MobileNumber}}",
-            "primeiroNome" : "{{Event.DEAudience-dfa3722f-07cc-323c-5e59-da5bdd5d93a8.primeiroNome}}"
+            "telefone": "{{InteractionDefaults.MobileNumber}}"
         }];
 
-        //testar com Contact.EmailAddress, ou só emailAddress
+        //Event.DEAudience-dfa3722f-07cc-323c-5e59-da5bdd5d93a8.primeiroNome para buscar da DE. vem no schema, mas ai tem que saber o nome do campo
         //daqui passa para config.json
         
         payload['metaData'].isConfigured = true;
