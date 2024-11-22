@@ -97,17 +97,9 @@ define([
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
             "emailAddress": "{{InteractionDefaults.Email}}",
-            "telefone": "{{InteractionDefaults.MobileNumber}}"
+            "telefone": "{{InteractionDefaults.MobileNumber}}",
+            "primeiroNome" : "{{Event.DEAudience-dfa3722f-07cc-323c-5e59-da5bdd5d93a8.primeiroNome}}"
         }];
-
-        //tentativa1: InteractionDefaults.Email  - funcionou
-        // {{InteractionDefaults.SMS}} nao funcionou
-        // {{InteractionDefaults.Telefone}} nao funcionou
-        // {{Contact.Default.SMS}} funcionou mas veio vazio
-        // "{{Contact.Default.telemovel}}" nao funcionou
-        // "{{Contact.Default.MobilePhone}} nao funcionou
-        // {{InteractionDefaults.Phone}}
-        // "{{InteractionDefaults.MobileNumber}}"
 
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
