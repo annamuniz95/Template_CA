@@ -87,16 +87,12 @@ define([
             "emailAddress": "",
         }];
 
-        console.log("|| payload.inArgument: ");
-
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
         
         payload['metaData'].isConfigured = true;
 
-        console.log(payload);
         connection.trigger('updateActivity', payload);
     }
-
 
 });
