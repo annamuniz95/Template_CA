@@ -72,13 +72,7 @@
       "arguments": {
           "execute": {
               "inArguments": [
-                {
-                "phoneNumber": {
-                  "dataType": "Phone",
-                  "isNullable": false,
-                  "direction": "in"
-                }
-              }
+              
               ],
               "outArguments": []
           }
