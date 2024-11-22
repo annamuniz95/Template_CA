@@ -53,8 +53,6 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log("inArguments: " + JSON.stringify(inArguments));
-
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
                 
@@ -92,12 +90,10 @@ define([
             "opcao2": opcao_2,
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
-            "phoneNumber": "",
-            "emailAddress": "",
+            "phoneNumber": "{{InteractionDefaults.telemovel}}",
+            "emailAddress": "{{InteractionDefaults.email}}",
         }];
 
-        console.log("|| payload.inArgument: " + payload.inArgument);
-        console.log("|| payload.inArgument JSON: " + JSON.stringify(payload.inArgument));
 
         //testar com Contact.EmailAddress, ou só emailAddress
         //daqui passa para config.json
