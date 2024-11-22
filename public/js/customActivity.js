@@ -91,9 +91,11 @@ define([
             "opcao3": opcao_3,
             "contactKey": "{{Contact.Key}}",
             "emailAddress": "{{InteractionDefaults.Email}}",
+            "telefone": "{{InteractionDefaults.SMS}}"
         }];
 
         //tentativa1: InteractionDefaults.Email 
+        // {{InteractionDefaults.SMS}}
 
 
         //testar com Contact.EmailAddress, ou só emailAddress
