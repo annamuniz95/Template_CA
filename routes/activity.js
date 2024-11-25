@@ -5,6 +5,7 @@ var util = require('util');
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 const SFClient = require('../public/js/sfmc-client');
+const estruturaJornada = require('../public/js/getPushInformation');
 var util = require('util');
 var http = require('https');
 const { Console } = require('console');
@@ -50,29 +51,16 @@ function logData(req) {
     console.log("originalUrl: " + req.originalUrl);*/
 }
 
-/*
- * POST Handler for / route of Activity (this is the edit route).
- */
 exports.edit = function (req, res) {
-    // Data from the req and put it in an array accessible to the main app.
-    //console.log( "edit: " +  req.body );
     logData(req);
-    //res.send(200, 'Edit');
     res.status(200).send('Edit');
 };
 
-/*
- * POST Handler for /save/ route of Activity.
- */
 exports.save = function (req, res) {
-    // Data from the req and put it in an array accessible to the main app.
     logData(req);
     res.status(200).send('Save');
 };
 
-/*
- * POST Handler for /execute/ route of Activity.
- */
 exports.execute = function (req, res) {
     console.log("// ============================== ||");
     console.log("|| Aplicação                      ||");
@@ -81,14 +69,11 @@ exports.execute = function (req, res) {
     console.log("||                            /o/ ||");
     console.log("|| ============================== ||");
 
-
+    estruturaJornada("Custom Activity");
 
     var Opcao_1, Opcao_2, Opcao_3;
 
-    // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-
-        // verification error -> unauthorized request
         if (err) {
             console.error(err);
             return res.status(401).end();
@@ -97,8 +82,7 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
             console.log("|| só decoded: " + JSON.stringify(decoded));
-            
-            // decoded in arguments
+
             var decodedArgs = decoded.inArguments[0];
             console.log(" decodedArgs stringify: " + JSON.stringify(decodedArgs));
 
@@ -124,8 +108,6 @@ exports.execute = function (req, res) {
         }
     });
 
-    //inserir logica de execução aqui
-
     const deExternalKey = "teste_logs"; //process.env.deExternalKey
 
     SFClient(deExternalKey, [ {
@@ -137,22 +119,13 @@ exports.execute = function (req, res) {
             data: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
         },
       },]);
-    //fim lógica execução
 };
 
-
-/*
- * POST Handler for /publish/ route of Activity.
- */
 exports.publish = function (req, res) {
-    // Data from the req and put it in an array accessible to the main app.
     logData(req);
     res.status(200).send('Publish');
 };
 
-/*
- * POST Handler for /validate/ route of Activity.
- */
 exports.validate = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     logData(req);
