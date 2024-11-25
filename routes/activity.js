@@ -66,6 +66,8 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
+    console.log("funsão save res!!");
+    console.log(res.body);
     logData(req);
     res.status(200).send('Save');
 };
