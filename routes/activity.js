@@ -81,7 +81,6 @@ exports.execute = function (req, res) {
     console.log("||                            /o/ ||");
     console.log("|| ============================== ||");
 
-    console.log('Payload recebido:', JSON.stringify(req.body, null, 2));
 
 
     var Opcao_1, Opcao_2, Opcao_3;
@@ -96,6 +95,7 @@ exports.execute = function (req, res) {
         }
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+            
             console.log("|| só decoded: " + JSON.stringify(decoded));
             
             // decoded in arguments
