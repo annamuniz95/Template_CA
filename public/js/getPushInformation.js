@@ -62,7 +62,7 @@ async function authenticate() {
     console.log("|| Resposta da API MC dados hornada:" + response.status + "||");
     return response.data;
   } catch (error) {
-    console.error('|| Erro dados jornada:' + error.response ? error.response.data : error + "||");
+    console.error('|| Erro dados jornada:' + error.response ? error.response : error + "||");
     throw error;
   }
 };
