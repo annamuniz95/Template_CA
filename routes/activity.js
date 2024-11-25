@@ -96,7 +96,7 @@ exports.execute = function (req, res) {
         }
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            console.log("|| só decoded: " + decoded);
+            console.log("|| só decoded: " + JSON.stringify(decoded));
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
