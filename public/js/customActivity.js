@@ -45,7 +45,7 @@ define([
 
     function initialize(data) {
         console.log("função initialize!!");
-        console.log("função initialize, data: " + data);
+        console.log(data);
         if (data) {
             payload = data;
         }
