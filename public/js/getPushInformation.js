@@ -64,10 +64,9 @@ async function estruturaJornada(nomeJornada){
       },
     });
     console.log("|| Resposta da API MC dados .status:" + response.status + "||");
-    console.log("|| Resposta da API MC dados .data:" + response.data + "||");
-    console.log("|| Resposta da API MC dados .headers:" + response.headers + "||");
-    console.log("|| Resposta da API MC dados .config:" + response.config + "||");
-    console.log("|| Resposta da API MC dados .request:" + response.request + "||");
+    console.log("|| Resposta da API MC dados .data:" + JSON.stringify(response.data) + "||");
+    console.log("|| Resposta da API MC dados .config:" + JSON.stringify(response.config) + "||");
+    console.log("|| Resposta da API MC dados .request:" + JSON.stringify(response.request) + "||");
     return response.data;
   } catch (error) {
     console.error('|| Erro dados jornada:' + error.response ? error.response : error + "||");
