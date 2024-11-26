@@ -53,13 +53,21 @@ async function authenticate() {
     const { origin } = await setOptions();
     const url = `${origin}/interaction/v1/interactions?nameOrDescription=${nomeJornada}`; 
 
-    const response = await axios.post(url, data, {
+    /*
+    ARRUMAR ESSA REQUISIÇÃO PARA SER GET !!!!!!!!!!!!!
+    */
+
+    const response = await axios.get(url, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
     });
-    console.log("|| Resposta da API MC dados hornada:" + response.status + "||");
+    console.log("|| Resposta da API MC dados .status:" + response.status + "||");
+    console.log("|| Resposta da API MC dados .data:" + response.data + "||");
+    console.log("|| Resposta da API MC dados .headers:" + response.headers + "||");
+    console.log("|| Resposta da API MC dados .config:" + response.config + "||");
+    console.log("|| Resposta da API MC dados .request:" + response.request + "||");
     return response.data;
   } catch (error) {
     console.error('|| Erro dados jornada:' + error.response ? error.response : error + "||");
