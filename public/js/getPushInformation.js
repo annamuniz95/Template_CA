@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 const axios = require('axios');
 
@@ -31,7 +31,6 @@ async function authenticate() {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
-
     return response.data.access_token;
   } catch (error) {
     console.error('|| Erro na autenticação:' + error + " ||");
@@ -45,7 +44,7 @@ async function authenticate() {
  * @param {Array} data - Dados a serem salvos.
  * @returns {Promise} - Promise com o resultado da operação.
  */
-async function estruturaJornada(nomeJornada){
+/*async function estruturaJornada(nomeJornada){
   console.log("nome Jornada: " + nomeJornada); 
 
   try {
@@ -57,7 +56,7 @@ async function estruturaJornada(nomeJornada){
     ARRUMAR ESSA REQUISIÇÃO PARA SER GET !!!!!!!!!!!!!
     */
 
-    const response = await axios.get(url, {
+    /*const response = await axios.get(url, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -75,4 +74,4 @@ async function estruturaJornada(nomeJornada){
 };
 
 
-module.exports = {estruturaJornada};
+module.exports = {estruturaJornada};*/

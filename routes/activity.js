@@ -5,7 +5,6 @@ var util = require('util');
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 const SFClient = require('../public/js/sfmc-client');
-const estruturaJornada = require('../public/js/getPushInformation');
 var util = require('util');
 var http = require('https');
 const { Console } = require('console');
@@ -68,15 +67,6 @@ exports.execute = function (req, res) {
     console.log("||                executando      ||");
     console.log("||                            /o/ ||");
     console.log("|| ============================== ||");
-
-    var estruturaDeResposta;
-    async function chamarEstrutura(){
-        estruturaDeResposta = await estruturaJornada("Custom Activity");
-    }
-
-    console.log("//estrutura da resposta//");
-    console.log(estruturaDeResposta);
-    console.log(JSON.stringify(estruturaDeResposta));
 
     var Opcao_1, Opcao_2, Opcao_3;
 

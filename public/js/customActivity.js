@@ -40,8 +40,6 @@ define([
         connection.trigger('requestEndpoints');
 
         alert("preencha as informações");
-        /*console.log("estruturaJornada: " + estruturaJornada2);
-        alert("estruturaJornada: " + estruturaJornada2);*/
 
 
     }
