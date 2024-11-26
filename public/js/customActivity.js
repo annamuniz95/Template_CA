@@ -1,5 +1,5 @@
 //onst { json } = require("body-parser");
-const estruturaJornada = require('../public/js/getPushInformation');
+const estruturaJornada = require('../../public/js/getPushInformation');
 
 define([
     'postmonger'
