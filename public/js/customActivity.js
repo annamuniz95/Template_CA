@@ -41,9 +41,9 @@ define([
         connection.trigger('requestEndpoints');
 
         alert("preencha as informações");
-        var estruturaJornada2 =  estruturaJornada("Custom Activity");
-        console.log("estruturaJornada: " + estruturaJornada2);
-        alert("estruturaJornada: " + estruturaJornada2);
+        estruturaJornada("Custom Activity");
+        /*console.log("estruturaJornada: " + estruturaJornada2);
+        alert("estruturaJornada: " + estruturaJornada2);*/
 
 
     }
