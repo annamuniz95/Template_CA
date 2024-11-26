@@ -1,5 +1,4 @@
 //onst { json } = require("body-parser");
-const estruturaJornada = require('../../public/js/getPushInformation');
 
 define([
     'postmonger'
@@ -41,7 +40,6 @@ define([
         connection.trigger('requestEndpoints');
 
         alert("preencha as informações");
-        estruturaJornada("Custom Activity");
         /*console.log("estruturaJornada: " + estruturaJornada2);
         alert("estruturaJornada: " + estruturaJornada2);*/
 
