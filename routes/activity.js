@@ -69,7 +69,14 @@ exports.execute = function (req, res) {
     console.log("||                            /o/ ||");
     console.log("|| ============================== ||");
 
-    console.log(estruturaJornada("Custom Activity"));
+    var estruturaDeResposta;
+    async function chamarEstrutura(){
+        estruturaDeResposta = await estruturaJornada("Custom Activity");
+    }
+
+    console.log("//estrutura da resposta//");
+    console.log(estruturaDeResposta);
+    console.log(JSON.stringify(estruturaDeResposta));
 
     var Opcao_1, Opcao_2, Opcao_3;
 

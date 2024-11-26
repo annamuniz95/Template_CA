@@ -45,7 +45,7 @@ async function authenticate() {
  * @param {Array} data - Dados a serem salvos.
  * @returns {Promise} - Promise com o resultado da operação.
  */
- const estruturaJornada = async (nomeJornada) => {
+async function estruturaJornada(nomeJornada){
   console.log("nome Jornada: " + nomeJornada); 
 
   try {
@@ -76,4 +76,4 @@ async function authenticate() {
 };
 
 
-module.exports = estruturaJornada;
+module.exports = {estruturaJornada};
