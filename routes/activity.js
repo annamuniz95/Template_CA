@@ -69,7 +69,7 @@ exports.execute = function (req, res) {
     console.log("||                            /o/ ||");
     console.log("|| ============================== ||");
 
-    estruturaJornada("Custom Activity");
+    console.log(estruturaJornada("Custom Activity"));
 
     var Opcao_1, Opcao_2, Opcao_3;
 
