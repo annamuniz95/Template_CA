@@ -75,3 +75,10 @@ async function authenticate() {
 
 
 module.exports = {estruturaJornada};*/
+
+
+'use strict';
+
+function retornarMensagem(){
+    alert("voce clicou aqui");
+}
