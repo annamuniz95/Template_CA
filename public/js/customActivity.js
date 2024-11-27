@@ -20,27 +20,16 @@ define([
     connection.on('requestedSchema', function (data) {
         // save schema
         console.log('*** Schema ***', JSON.stringify(data['schema']));
-        console.log('*** Schema only data ***', JSON.stringify(data));
      }); //adicionei agora
-
-    connection.on('clickedNext', save);
-
-    /*connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
-        console.log('DEFINITION ->');
-        console.log(eventDefinitionModel);
-        if (eventDefinitionModel) {
-            console.log('>>>Event Definition Key ' + eventDefinitionKey);
-            console.log('>>>Request Trigger', JSON.stringify(eventDefinitionModel));
-            console.log('request schema ' + JSON.stringify(data['schema']));
-        }
-    });*/
 
     connection.on('requestedInteraction', function (interaction) {
         if (interaction) {
             requestedInteractionBody = interaction;
         }
-        console.log("|| interaction: " + interaction);
+        console.log("|| interaction: " + JSON.stringify(interaction));
     });
+
+    connection.on('clickedNext', save);
 
    
     function onRender() {
