@@ -32,7 +32,7 @@ define([
     });
 
    
-    function onRender() {
+    function onRender(data) {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
 
@@ -40,6 +40,8 @@ define([
         connection.trigger('requestEndpoints');
 
         alert("preencha as informações");
+        console.log("onRenderData: " + JSON.stringify(data));
+        console.log("- sem stringify onRenderData: " + data);
 
 
     }
