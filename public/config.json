@@ -4,7 +4,7 @@
       "icon": "images/universo_icon.png",
       "iconSmall": "images/universo_icon.png",
       "category": "message",
-      "isConfigured": true
+      "isConfigured": false
   },
   "type": "REST",
   "lang": {
