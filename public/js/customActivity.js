@@ -111,8 +111,9 @@ define([
         connection.trigger('updateActivity', payload);
     }
 
-    module.exports = {
-        requestedInteractionBody
+    window.getRequestedInteractionBody = function() {
+        return window.requestedInteractionBody;
     };
-    
+
+
 });
