@@ -23,11 +23,18 @@ define([
         console.log('*** Schema ***', JSON.stringify(data['schema']));
      }); //adicionei agora
 
-    connection.on('requestedInteraction', function (interaction) {
-        if (interaction) {
-            requestedInteractionBody = interaction;
+     connection.on('requestedInteraction', function (interaction) {
+        console.log("estou no requestedInteraction");
+        try {
+            if (interaction) {
+                requestedInteractionBody = interaction;
+                console.log("|| Interaction: " + JSON.stringify(interaction));
+            } else {
+                console.warn("No interaction data received.");
+            }
+        } catch (error) {
+            console.error("Error in requestedInteraction:", error);
         }
-        console.log("|| interaction: " + JSON.stringify(interaction));
     });
 
     connection.on('clickedNext', save);
