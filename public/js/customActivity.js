@@ -23,20 +23,6 @@ define([
         console.log('*** Schema ***', JSON.stringify(data['schema']));
      }); //adicionei agora
 
-     connection.on('requestedInteraction', function (interaction) {
-        console.log("estou no requestedInteraction");
-        try {
-            if (interaction) {
-                requestedInteractionBody = interaction;
-                console.log("|| Interaction: " + JSON.stringify(interaction));
-            } else {
-                console.warn("No interaction data received.");
-            }
-        } catch (error) {
-            console.error("Error in requestedInteraction:", error);
-        }
-    });
-
     connection.on('clickedNext', save);
 
    
@@ -46,6 +32,19 @@ define([
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
         alert("preencha as informações");
+        connection.on('requestedInteraction', function (interaction) {
+            console.log("estou no requestedInteraction");
+            try {
+                if (interaction) {
+                    requestedInteractionBody = interaction;
+                    console.log("|| Interaction: " + JSON.stringify(interaction));
+                } else {
+                    console.warn("No interaction data received.");
+                }
+            } catch (error) {
+                console.error("Error in requestedInteraction:", error);
+            }
+        });
     }
 
     function initialize(data) {
