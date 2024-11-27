@@ -20,21 +20,20 @@ define([
     connection.on('requestedSchema', function (data) {
         // save schema
         console.log('*** Schema ***', JSON.stringify(data['schema']));
+        console.log('*** Schema only data ***', JSON.stringify(data));
      }); //adicionei agora
 
     connection.on('clickedNext', save);
 
-    connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
+    /*connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
         console.log('DEFINITION ->');
         console.log(eventDefinitionModel);
         if (eventDefinitionModel) {
             console.log('>>>Event Definition Key ' + eventDefinitionKey);
-            /*If you want to see all*/
             console.log('>>>Request Trigger', JSON.stringify(eventDefinitionModel));
-            //journeyId = eventDefinitionModel.arguments.eventDefinitionId;
             console.log('request schema ' + JSON.stringify(data['schema']));
         }
-    });
+    });*/
 
     connection.on('requestedInteraction', function (interaction) {
         if (interaction) {
@@ -44,10 +43,9 @@ define([
     });
 
    
-    function onRender(data) {
+    function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
         alert("preencha as informações");
@@ -84,12 +82,12 @@ define([
     }
 
     function onGetTokens(tokens) {
-        console.log(tokens);
+        //console.log(tokens);
         authTokens = tokens;
     }
 
     function onGetEndpoints(endpoints) {
-        console.log(endpoints);
+        //console.log(endpoints);
     }
 
     function save() {
