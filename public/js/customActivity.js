@@ -24,6 +24,18 @@ define([
 
     connection.on('clickedNext', save);
 
+    connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
+        console.log('DEFINITION ->');
+        console.log(eventDefinitionModel);
+        if (eventDefinitionModel) {
+            console.log('>>>Event Definition Key ' + eventDefinitionKey);
+            /*If you want to see all*/
+            console.log('>>>Request Trigger', JSON.stringify(eventDefinitionModel));
+            //journeyId = eventDefinitionModel.arguments.eventDefinitionId;
+            console.log('request schema ' + JSON.stringify(data['schema']));
+        }
+    });
+
     connection.on('requestedInteraction', function (interaction) {
         if (interaction) {
             requestedInteractionBody = interaction;
@@ -38,12 +50,7 @@ define([
 
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-
         alert("preencha as informações");
-        console.log("onRenderData: " + JSON.stringify(data));
-        console.log("- sem stringify onRenderData: " + data);
-
-
     }
 
     function initialize(data) {
