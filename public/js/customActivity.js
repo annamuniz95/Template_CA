@@ -32,6 +32,8 @@ define([
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
         alert("preencha as informações");
+        connection.trigger('requestInteraction');
+        alert("mandei o trigger");
         connection.on('requestedInteraction', function (interaction) {
             console.log("estou no requestedInteraction");
             try {
@@ -45,6 +47,7 @@ define([
                 console.error("Error in requestedInteraction:", error);
             }
         });
+        alert("depois do trigger");
     }
 
     function initialize(data) {
