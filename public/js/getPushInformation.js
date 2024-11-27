@@ -79,7 +79,7 @@ module.exports = {estruturaJornada};*/
 
 'use strict';
 
-const requestedInteractionBody = require('customActivity');
+const requestedInteractionBody = require('../js/customActivity');
 
 function retornarMensagem(){
     alert("voce clicou aqui");
