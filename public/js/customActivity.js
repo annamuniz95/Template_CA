@@ -31,11 +31,8 @@ define([
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-        alert("preencha as informações");
         connection.trigger('requestInteraction');
-        alert("mandei o trigger");
         connection.on('requestedInteraction', function (interaction) {
-            console.log("estou no requestedInteraction");
             try {
                 if (interaction) {
                     requestedInteractionBody = interaction;
@@ -47,7 +44,6 @@ define([
                 console.error("Error in requestedInteraction:", error);
             }
         });
-        alert("depois do trigger");
     }
 
     function initialize(data) {
@@ -115,4 +111,8 @@ define([
         connection.trigger('updateActivity', payload);
     }
 
+    module.exports = {
+        requestedInteractionBody
+    };
+    
 });

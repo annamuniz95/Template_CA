@@ -79,8 +79,11 @@ module.exports = {estruturaJornada};*/
 
 'use strict';
 
+const { requestedInteractionBody } = require('./interaction.js');
+
 function retornarMensagem(){
     alert("voce clicou aqui");
+    alert(requestedInteractionBody);
     //pegar aqui info do nome da jornada e passar para o endpoint
-    
+
 }
