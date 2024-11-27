@@ -81,4 +81,6 @@ module.exports = {estruturaJornada};*/
 
 function retornarMensagem(){
     alert("voce clicou aqui");
+    //pegar aqui info do nome da jornada e passar para o endpoint
+    
 }

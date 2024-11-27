@@ -52,6 +52,9 @@ function logData(req) {
 
 exports.edit = function (req, res) {
     logData(req);
+    console.log("|| entrou no edit ||");
+    console.log("|| req.body || : " + req.body);
+    console.log("|| decoded dentro do edit || : " + decoded);
     res.status(200).send('Edit');
 };
 
