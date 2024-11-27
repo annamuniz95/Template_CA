@@ -10,6 +10,7 @@ define([
     var connection = new Postmonger.Session();
     var authTokens = {};
     var payload = {};
+    var requestedInteractionBody = {};
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
