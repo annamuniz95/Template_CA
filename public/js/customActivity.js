@@ -111,9 +111,9 @@ define([
         connection.trigger('updateActivity', payload);
     }
 
-    window.getRequestedInteractionBody = function() {
+    /*window.getRequestedInteractionBody = function() {
         return window.requestedInteractionBody;
-    };
+    };*/
 
 
 });

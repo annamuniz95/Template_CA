@@ -9,3 +9,5 @@ function retornarMensagem(){
     //pegar aqui info do nome da jornada e passar para o endpoint
 
 }
+
+module.exports = retornarMensagem;
