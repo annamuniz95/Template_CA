@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript" src="js/postmonger.js"></script>
     <script type="text/javascript" src="js/customActivity.js"></script>
     <script type="text/javascript" src="js/getPushInformation.js"></script>
-    <script type="text/javascript">
+    <!--script type="text/javascript">
         (function () {
             var config = {
                 baseUrl: 'js'
@@ -22,6 +23,28 @@
             ];
 
             require(config, dependencies);
+        })();
+    </script-->
+    <script type="text/javascript">
+        (function () {
+            // Configuração do RequireJS para localizar os módulos na pasta 'js'
+            require.config({
+                baseUrl: 'js', // Diretório base para os módulos
+                paths: {
+                    postmonger: 'postmonger', // Referência ao módulo Postmonger que já está no diretório js
+                    jquery: 'jquery-3.6.0.min' // Referência ao módulo jQuery que já está no diretório js
+                }
+            });
+
+            // Dependências a serem carregadas
+            var dependencies = [
+                'customActivity' // A atividade personalizada que você deseja carregar
+            ];
+
+            // Carregar as dependências e inicializar a atividade
+            require(dependencies, function () {
+                console.log('Custom Activity module loaded successfully.');
+            });
         })();
     </script>
     <style>
