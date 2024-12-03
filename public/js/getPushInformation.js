@@ -2,7 +2,7 @@
 
 //const requestedInteractionBody = require('../js/customActivity');
 
-function retornarMensagem(){
+const retornarMensagem = () => {
     alert("voce clicou aqui");
     /*console.log("dentro da função retornar mensagem");
     console.log(window.getRequestedInteractionBody());*/
