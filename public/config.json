@@ -1,56 +1,56 @@
 {
   "workflowApiVersion": "1.1",
   "metaData": {
-      "icon": "images/universo_icon.png",
-      "iconSmall": "images/universo_icon.png",
-      "category": "message",
-      "isConfigured": true
+    "icon": "images/universo_icon.png",
+    "iconSmall": "images/universo_icon.png",
+    "category": "message",
+    "isConfigured": true
   },
   "type": "REST",
   "lang": {
-      "en-US": {
-          "name": "Push Log",
-        "description": "A Template for a custom Journey Builder activity",
-        "step1Label": "Configure Activity"
-      }
+    "en-US": {
+      "name": "Push Log",
+      "description": "A Template for a custom Journey Builder activity",
+      "step1Label": "Configure Activity"
+    }
   },
   "arguments": {
-      "execute": {
-          "inArguments":[
-      {
-                  "opcao1": "",
-                  "opcao2": "",
-                  "opcao3": "",
-                  "contactKey": "",
-                  "emailAddress":"",
-                  "telefone":""
-              }									
-    ],
-        "outArguments": [],
-        "url": "https://template-ca-0ra9.onrender.com/journeybuilder/execute",
-          "verb": "POST",
-          "body": "",
-          "header": "",
-          "format": "json",
-          "useJwt": true,
-          "timeout": 10000
-      }
+    "execute": {
+      "inArguments": [
+        {
+          "opcao1": "{{Contact.Attribute.YourDataExtension.Opcao1}}",
+          "opcao2": "{{Contact.Attribute.YourDataExtension.Opcao2}}",
+          "opcao3": "{{Contact.Attribute.YourDataExtension.Opcao3}}",
+          "contactKey": "{{Contact.Key}}",
+          "emailAddress": "{{Contact.Attribute.YourDataExtension.Email}}",
+          "telefone": "{{Contact.Attribute.YourDataExtension.Telefone}}"
+        }
+      ],
+      "outArguments": [],
+      "url": "https://template-ca-0ra9.onrender.com/journeybuilder/execute",
+      "verb": "POST",
+      "body": {},
+      "header": {},
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000
+    }
   },
   "configurationArguments": {
     "applicationExtensionKey": "f2318cde-3638-42be-808a-0c291721b59e",
     "save": {
       "url": "https://template-ca-0ra9.onrender.com/journeybuilder/save",
-        "verb": "POST",
+      "verb": "POST",
       "useJwt": true
-      },
-      "publish": {
+    },
+    "publish": {
       "url": "https://template-ca-0ra9.onrender.com/journeybuilder/publish",
-          "verb": "POST",
+      "verb": "POST",
       "useJwt": true
-      },
+    },
     "stop": {
       "url": "https://template-ca-0ra9.onrender.com/journeybuilder/stop",
-          "verb": "POST",
+      "verb": "POST",
       "useJwt": true
     },
     "validate": {
@@ -60,28 +60,28 @@
     }
   },
   "wizardSteps": [
-      { "label": "Configure Activity", "key": "step1" }
+    { "label": "Configure Activity", "key": "step1" }
   ],
   "userInterfaces": {
-      "configModal": {
-          "height": 600,
-          "width": 1200,
-        "fullscreen": false
-      }
+    "configModal": {
+      "height": 600,
+      "width": 1200,
+      "fullscreen": false
+    }
   },
   "schema": {
-      "arguments": {
-          "execute": {
-              "inArguments": [
-                { "name": "opcao1", "type": "boolean" },
-                { "name": "opcao2", "type": "boolean" },
-                { "name": "opcao3", "type": "boolean" },
-                { "name": "contactKey", "type": "string" },
-                { "name": "emailAddress", "type": "string" },
-                { "name": "telefone", "type": "string" }
-              ],
-              "outArguments": []
-          }
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          { "name": "opcao1", "type": "boolean" },
+          { "name": "opcao2", "type": "boolean" },
+          { "name": "opcao3", "type": "boolean" },
+          { "name": "contactKey", "type": "string" },
+          { "name": "emailAddress", "type": "string" },
+          { "name": "telefone", "type": "string" }
+        ],
+        "outArguments": []
       }
+    }
   }
 }
